@@ -1,0 +1,15 @@
+[Unit]
+Description=Pumpswitch
+After=network.target
+After=rc-local.service
+
+[Service]
+ExecStart=/home/pi/pumpswitch7.arm
+WorkingDirectory=/home/pi/
+StandardOutput=null
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
